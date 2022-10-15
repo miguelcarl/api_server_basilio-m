@@ -1,0 +1,538 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost:8000'
+paths:
+  /api/products:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  products:
+                    -
+                      id: 1
+                      title: 'Onitsuka Tiger Mexico 66'
+                      description: 'Ideal for urban living, working, and playing.'
+                      currency: PHP
+                      price: 6000
+                      brand: Asics
+                      category: Shoes
+                      image: 'https://images.asics.com/is/image/asics/DL408_0146_SB_Z2_GLB-2?$zoom$'
+                      created_at: null
+                      updated_at: '2022-10-08T05:49:41.000000Z'
+                    -
+                      id: 3
+                      title: 'Carhartt Relaxed Fit Heavyweight Short-Sleeve Pocket T-shirt'
+                      description: 'Sample Keycaps Description'
+                      currency: PHP
+                      price: 1500
+                      brand: Carhartt
+                      category: Fashion
+                      image: 'https://logoshirtsdirect.com/wp-content/uploads/2016/08/9550-Port-1-CTK87PortModelFront-1200W-562x843.jpg'
+                      created_at: null
+                      updated_at: null
+                    -
+                      id: 4
+                      title: 'New Balance 550'
+                      description: "From '89 with love."
+                      currency: PHP
+                      price: 7000
+                      brand: 'New Balance'
+                      category: Shoes
+                      image: 'https://cf.shopee.ph/file/6036699db90af45ed36ff6f2483fc790'
+                      created_at: '2022-10-08T05:25:58.000000Z'
+                      updated_at: '2022-10-08T05:25:58.000000Z'
+                properties:
+                  products:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        title: 'Onitsuka Tiger Mexico 66'
+                        description: 'Ideal for urban living, working, and playing.'
+                        currency: PHP
+                        price: 6000
+                        brand: Asics
+                        category: Shoes
+                        image: 'https://images.asics.com/is/image/asics/DL408_0146_SB_Z2_GLB-2?$zoom$'
+                        created_at: null
+                        updated_at: '2022-10-08T05:49:41.000000Z'
+                      -
+                        id: 3
+                        title: 'Carhartt Relaxed Fit Heavyweight Short-Sleeve Pocket T-shirt'
+                        description: 'Sample Keycaps Description'
+                        currency: PHP
+                        price: 1500
+                        brand: Carhartt
+                        category: Fashion
+                        image: 'https://logoshirtsdirect.com/wp-content/uploads/2016/08/9550-Port-1-CTK87PortModelFront-1200W-562x843.jpg'
+                        created_at: null
+                        updated_at: null
+                      -
+                        id: 4
+                        title: 'New Balance 550'
+                        description: "From '89 with love."
+                        currency: PHP
+                        price: 7000
+                        brand: 'New Balance'
+                        category: Shoes
+                        image: 'https://cf.shopee.ph/file/6036699db90af45ed36ff6f2483fc790'
+                        created_at: '2022-10-08T05:25:58.000000Z'
+                        updated_at: '2022-10-08T05:25:58.000000Z'
+                    items:
+                      type: object
+      tags:
+        - Endpoints
+      security: []
+  /api/product/add:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: et
+                description:
+                  type: string
+                  description: ''
+                  example: est
+                currency:
+                  type: string
+                  description: ''
+                  example: laboriosam
+                price:
+                  type: string
+                  description: ''
+                  example: fugit
+                brand:
+                  type: string
+                  description: ''
+                  example: quis
+                category:
+                  type: string
+                  description: ''
+                  example: facilis
+                image:
+                  type: string
+                  description: ''
+                  example: ut
+              required:
+                - title
+                - description
+                - currency
+                - price
+                - brand
+                - category
+                - image
+      security: []
+  '/api/products/{product_id}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  products:
+                    id: 1
+                    title: 'Onitsuka Tiger Mexico 66'
+                    description: 'Ideal for urban living, working, and playing.'
+                    currency: PHP
+                    price: 6000
+                    brand: Asics
+                    category: Shoes
+                    image: 'https://images.asics.com/is/image/asics/DL408_0146_SB_Z2_GLB-2?$zoom$'
+                    created_at: null
+                    updated_at: '2022-10-08T05:49:41.000000Z'
+                properties:
+                  products:
+                    type: object
+                    example:
+                      id: 1
+                      title: 'Onitsuka Tiger Mexico 66'
+                      description: 'Ideal for urban living, working, and playing.'
+                      currency: PHP
+                      price: 6000
+                      brand: Asics
+                      category: Shoes
+                      image: 'https://images.asics.com/is/image/asics/DL408_0146_SB_Z2_GLB-2?$zoom$'
+                      created_at: null
+                      updated_at: '2022-10-08T05:49:41.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: product_id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/products/{product_id}/update':
+    put:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: mollitia
+                description:
+                  type: string
+                  description: ''
+                  example: iste
+                currency:
+                  type: string
+                  description: ''
+                  example: deleniti
+                price:
+                  type: string
+                  description: ''
+                  example: vel
+                brand:
+                  type: string
+                  description: ''
+                  example: dicta
+                category:
+                  type: string
+                  description: ''
+                  example: sapiente
+                image:
+                  type: string
+                  description: ''
+                  example: iste
+              required:
+                - title
+                - description
+                - currency
+                - price
+                - brand
+                - category
+                - image
+      security: []
+    parameters:
+      -
+        in: path
+        name: product_id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/products/{product_id}/delete':
+    delete:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: product_id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/products/{title}/search':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: title
+        description: ''
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/products/category/categories:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  products:
+                    -
+                      id: 1
+                      title: 'Onitsuka Tiger Mexico 66'
+                      description: 'Ideal for urban living, working, and playing.'
+                      currency: PHP
+                      price: 6000
+                      brand: Asics
+                      category: Shoes
+                      image: 'https://images.asics.com/is/image/asics/DL408_0146_SB_Z2_GLB-2?$zoom$'
+                      created_at: null
+                      updated_at: '2022-10-08T05:49:41.000000Z'
+                    -
+                      id: 3
+                      title: 'Carhartt Relaxed Fit Heavyweight Short-Sleeve Pocket T-shirt'
+                      description: 'Sample Keycaps Description'
+                      currency: PHP
+                      price: 1500
+                      brand: Carhartt
+                      category: Fashion
+                      image: 'https://logoshirtsdirect.com/wp-content/uploads/2016/08/9550-Port-1-CTK87PortModelFront-1200W-562x843.jpg'
+                      created_at: null
+                      updated_at: null
+                    -
+                      id: 4
+                      title: 'New Balance 550'
+                      description: "From '89 with love."
+                      currency: PHP
+                      price: 7000
+                      brand: 'New Balance'
+                      category: Shoes
+                      image: 'https://cf.shopee.ph/file/6036699db90af45ed36ff6f2483fc790'
+                      created_at: '2022-10-08T05:25:58.000000Z'
+                      updated_at: '2022-10-08T05:25:58.000000Z'
+                properties:
+                  products:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        title: 'Onitsuka Tiger Mexico 66'
+                        description: 'Ideal for urban living, working, and playing.'
+                        currency: PHP
+                        price: 6000
+                        brand: Asics
+                        category: Shoes
+                        image: 'https://images.asics.com/is/image/asics/DL408_0146_SB_Z2_GLB-2?$zoom$'
+                        created_at: null
+                        updated_at: '2022-10-08T05:49:41.000000Z'
+                      -
+                        id: 3
+                        title: 'Carhartt Relaxed Fit Heavyweight Short-Sleeve Pocket T-shirt'
+                        description: 'Sample Keycaps Description'
+                        currency: PHP
+                        price: 1500
+                        brand: Carhartt
+                        category: Fashion
+                        image: 'https://logoshirtsdirect.com/wp-content/uploads/2016/08/9550-Port-1-CTK87PortModelFront-1200W-562x843.jpg'
+                        created_at: null
+                        updated_at: null
+                      -
+                        id: 4
+                        title: 'New Balance 550'
+                        description: "From '89 with love."
+                        currency: PHP
+                        price: 7000
+                        brand: 'New Balance'
+                        category: Shoes
+                        image: 'https://cf.shopee.ph/file/6036699db90af45ed36ff6f2483fc790'
+                        created_at: '2022-10-08T05:25:58.000000Z'
+                        updated_at: '2022-10-08T05:25:58.000000Z'
+                    items:
+                      type: object
+      tags:
+        - Endpoints
+      security: []
+  '/api/products/category/{category_name}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: category_name
+        description: ''
+        example: impedit
+        required: true
+        schema:
+          type: string
+tags:
+  -
+    name: Endpoints
+    description: ''

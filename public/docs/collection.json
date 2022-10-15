@@ -1,0 +1,438 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost:8000"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "ba316e53-5d25-4547-8dea-df63e749a320",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "api\/products",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "56"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"products\":[{\"id\":1,\"title\":\"Onitsuka Tiger Mexico 66\",\"description\":\"Ideal for urban living, working, and playing.\",\"currency\":\"PHP\",\"price\":6000,\"brand\":\"Asics\",\"category\":\"Shoes\",\"image\":\"https:\\\/\\\/images.asics.com\\\/is\\\/image\\\/asics\\\/DL408_0146_SB_Z2_GLB-2?$zoom$\",\"created_at\":null,\"updated_at\":\"2022-10-08T05:49:41.000000Z\"},{\"id\":3,\"title\":\"Carhartt Relaxed Fit Heavyweight Short-Sleeve Pocket T-shirt\",\"description\":\"Sample Keycaps Description\",\"currency\":\"PHP\",\"price\":1500,\"brand\":\"Carhartt\",\"category\":\"Fashion\",\"image\":\"https:\\\/\\\/logoshirtsdirect.com\\\/wp-content\\\/uploads\\\/2016\\\/08\\\/9550-Port-1-CTK87PortModelFront-1200W-562x843.jpg\",\"created_at\":null,\"updated_at\":null},{\"id\":4,\"title\":\"New Balance 550\",\"description\":\"From '89 with love.\",\"currency\":\"PHP\",\"price\":7000,\"brand\":\"New Balance\",\"category\":\"Shoes\",\"image\":\"https:\\\/\\\/cf.shopee.ph\\\/file\\\/6036699db90af45ed36ff6f2483fc790\",\"created_at\":\"2022-10-08T05:25:58.000000Z\",\"updated_at\":\"2022-10-08T05:25:58.000000Z\"}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/product\/add",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/product\/add",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/product\/add"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"et\",\"description\":\"est\",\"currency\":\"laboriosam\",\"price\":\"fugit\",\"brand\":\"quis\",\"category\":\"facilis\",\"image\":\"ut\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/products\/{product_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:product_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:product_id",
+                            "variable": [
+                                {
+                                    "id": "product_id",
+                                    "key": "product_id",
+                                    "value": "1",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "55"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"products\":{\"id\":1,\"title\":\"Onitsuka Tiger Mexico 66\",\"description\":\"Ideal for urban living, working, and playing.\",\"currency\":\"PHP\",\"price\":6000,\"brand\":\"Asics\",\"category\":\"Shoes\",\"image\":\"https:\\\/\\\/images.asics.com\\\/is\\\/image\\\/asics\\\/DL408_0146_SB_Z2_GLB-2?$zoom$\",\"created_at\":null,\"updated_at\":\"2022-10-08T05:49:41.000000Z\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/products\/{product_id}\/update",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:product_id\/update",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:product_id\/update",
+                            "variable": [
+                                {
+                                    "id": "product_id",
+                                    "key": "product_id",
+                                    "value": "1",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"mollitia\",\"description\":\"iste\",\"currency\":\"deleniti\",\"price\":\"vel\",\"brand\":\"dicta\",\"category\":\"sapiente\",\"image\":\"iste\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/products\/{product_id}\/delete",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:product_id\/delete",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:product_id\/delete",
+                            "variable": [
+                                {
+                                    "id": "product_id",
+                                    "key": "product_id",
+                                    "value": "1",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/products\/{title}\/search",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:title\/search",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:title\/search",
+                            "variable": [
+                                {
+                                    "id": "title",
+                                    "key": "title",
+                                    "value": "1",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "54"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/products\/category\/categories",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/category\/categories",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/category\/categories"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "53"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"products\":[{\"id\":1,\"title\":\"Onitsuka Tiger Mexico 66\",\"description\":\"Ideal for urban living, working, and playing.\",\"currency\":\"PHP\",\"price\":6000,\"brand\":\"Asics\",\"category\":\"Shoes\",\"image\":\"https:\\\/\\\/images.asics.com\\\/is\\\/image\\\/asics\\\/DL408_0146_SB_Z2_GLB-2?$zoom$\",\"created_at\":null,\"updated_at\":\"2022-10-08T05:49:41.000000Z\"},{\"id\":3,\"title\":\"Carhartt Relaxed Fit Heavyweight Short-Sleeve Pocket T-shirt\",\"description\":\"Sample Keycaps Description\",\"currency\":\"PHP\",\"price\":1500,\"brand\":\"Carhartt\",\"category\":\"Fashion\",\"image\":\"https:\\\/\\\/logoshirtsdirect.com\\\/wp-content\\\/uploads\\\/2016\\\/08\\\/9550-Port-1-CTK87PortModelFront-1200W-562x843.jpg\",\"created_at\":null,\"updated_at\":null},{\"id\":4,\"title\":\"New Balance 550\",\"description\":\"From '89 with love.\",\"currency\":\"PHP\",\"price\":7000,\"brand\":\"New Balance\",\"category\":\"Shoes\",\"image\":\"https:\\\/\\\/cf.shopee.ph\\\/file\\\/6036699db90af45ed36ff6f2483fc790\",\"created_at\":\"2022-10-08T05:25:58.000000Z\",\"updated_at\":\"2022-10-08T05:25:58.000000Z\"}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/products\/category\/{category_name}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/category\/:category_name",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/category\/:category_name",
+                            "variable": [
+                                {
+                                    "id": "category_name",
+                                    "key": "category_name",
+                                    "value": "impedit",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "52"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "[]",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}
